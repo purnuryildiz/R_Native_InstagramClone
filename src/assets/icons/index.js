@@ -3,3 +3,8 @@ export {ChevronDown} from './ChevronDown';
 export {Heart} from './Heart';
 export {Messages} from './Messages';
 export {AddFeeds} from './AddFeeds';
+export {BackArrow} from './BackArrow';
+export {VerifiedBadge} from './VerifiedBadge';
+export {NotificationIcon} from './NotificationIcon';
+export {OptionsIcon} from './OptionsIcon';
+export {MenuIcon} from './MenuIcon';
