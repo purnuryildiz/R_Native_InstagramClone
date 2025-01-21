@@ -14,7 +14,7 @@ export const titleTypes = {
   TEXT_22_700_40: 'TEXT_22_700_40',
 };
 
-const Title = ({theme = 'TEXT_12_400_18', text}) => {
+const Title = ({theme = titleTypes.TEXT_12_400_18, text}) => {
   return <Text style={styles[theme]}> {text} </Text>;
 };
 

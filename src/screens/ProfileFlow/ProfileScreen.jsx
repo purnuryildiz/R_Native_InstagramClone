@@ -6,6 +6,10 @@ import StatItem from '../../components/ProfileFlow/StatItem';
 import Title, {titleTypes} from '../../components/commons/Title';
 import {colors} from '../../constants/colors';
 import normalize from '../../utils/responsiveFunction';
+import CustomButton, {
+  themes,
+} from '../../components/CustomButtons/CustomButton';
+import {buttonTypes} from '../../components/CustomButtons/CustomButton.style';
 const source =
   'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400';
 const ProfileScreen = () => {
@@ -42,7 +46,7 @@ const ProfileScreen = () => {
           />
         </View>
         {/* Followers */}
-        <View>
+        <View style={styles.followers}>
           <View style={styles.images}>
             <Image source={{uri: source}} style={styles.image} />
             <Image
@@ -60,7 +64,24 @@ const ProfileScreen = () => {
               ]}
             />
           </View>
-          <View></View>
+          <View style={styles.followerInfo}>
+            <Title text={'Followed by'} theme={titleTypes.TEXT_13_400_16} />
+            <Title text={'username,'} theme={titleTypes.TEXT_13_700} />
+            <Title text={'username'} theme={titleTypes.TEXT_13_700} />
+
+            <Text>and </Text>
+            <Title text={'100 0thers'} theme={titleTypes.TEXT_13_700} />
+          </View>
+        </View>
+        {/* Buttons */}
+        <View style={styles.buttons}>
+          <CustomButton title={'Follow'} theme={buttonTypes.PRIMARY} />
+          <View style={styles.subButtons}>
+            <CustomButton title={'Message'} theme={buttonTypes.OUTLINE} />
+            <CustomButton title={'Subscribe'} theme={buttonTypes.OUTLINE} />
+            <CustomButton title={'Contact'} theme={buttonTypes.OUTLINE} />
+            <CustomButton title={'hh'} theme={buttonTypes.OUTLINE} />
+          </View>
         </View>
       </View>
     </View>
@@ -79,7 +100,6 @@ const styles = StyleSheet.create({
   statContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-
     gap: normalize(24),
   },
   bio: {
@@ -91,12 +111,28 @@ const styles = StyleSheet.create({
   usernameAndInfo: {
     gap: normalize(3),
   },
-  images: {flexDirection: 'row'},
+  images: {flexDirection: 'row', width: normalize(54)},
   image: {
     width: normalize(26),
     height: normalize(26),
     borderRadius: normalize(99),
     borderWidth: normalize(1.5),
     borderColor: colors.WHITE,
+  },
+  followers: {
+    flexDirection: 'row',
+
+    gap: normalize(12),
+  },
+  followerInfo: {
+    flexDirection: 'row',
+  },
+  buttons: {
+    gap: 6,
+  },
+  subButtons: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: 6,
   },
 });
