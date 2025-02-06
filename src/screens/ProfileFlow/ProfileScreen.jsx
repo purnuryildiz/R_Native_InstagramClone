@@ -10,13 +10,15 @@ import CustomButton, {
   themes,
 } from '../../components/CustomButtons/CustomButton';
 import {buttonTypes} from '../../components/CustomButtons/CustomButton.style';
-const source =
+import PressableIcon from '../../components/ProfileFlow/PressableIcon';
+import SavedIGStories from '../../components/ProfileFlow/SavedIGStories';
+export const source =
   'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400';
 const ProfileScreen = () => {
   return (
     <View>
       {/* Header */}
-      <Header screenName={routes.PROFILE_SCREEN} isMyProfile={true} />
+      <Header screenName={routes.PROFILE_SCREEN} isMyProfile={false} />
       {/* Avatar and Stat */}
       <View style={styles.container}>
         <Avatar image={source} />
@@ -80,9 +82,12 @@ const ProfileScreen = () => {
             <CustomButton title={'Message'} theme={buttonTypes.OUTLINE} />
             <CustomButton title={'Subscribe'} theme={buttonTypes.OUTLINE} />
             <CustomButton title={'Contact'} theme={buttonTypes.OUTLINE} />
-            <CustomButton title={'hh'} theme={buttonTypes.OUTLINE} />
+            <PressableIcon />
           </View>
         </View>
+      </View>
+      <View>
+        <SavedIGStories />
       </View>
     </View>
   );

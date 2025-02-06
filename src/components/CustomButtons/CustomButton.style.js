@@ -29,7 +29,7 @@ const styles = {
       alignItems: 'center',
       paddingVertical: 7,
       borderRadius: 3,
-      borderWidth: 0.5,
+      borderWidth: 0.18,
       borderColor: colors.BLACK,
       flex: 1,
     },

@@ -8,3 +8,4 @@ export {VerifiedBadge} from './VerifiedBadge';
 export {NotificationIcon} from './NotificationIcon';
 export {OptionsIcon} from './OptionsIcon';
 export {MenuIcon} from './MenuIcon';
+export {Frame6} from './Frame6';
